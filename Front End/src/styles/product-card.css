@@ -1,0 +1,229 @@
+.card{
+    border-radius: 6px !important;
+    margin: 10px;
+    padding: 20px;
+    outline: 0 !important;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #ebe6e6;
+}
+.product-card{
+    background-color: white;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 0px;
+}
+.card:hover{
+    box-shadow: rgba(253, 11, 11, 0.2) 0px 2px 8px 0px;
+    /* transition:0.3s;  */
+}
+.product-card .product-image{
+    width: 100%;
+    height: auto;
+}
+.product-card .product-image img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* transition: 0.3s; */
+}
+.product-card .product-image > a > img:last-child{
+    display: none;
+}
+.product-card:hover .product-image > img:nth-child(1){
+    display: none;
+}
+.product-card:hover .product-image > img:last-child{
+    display: block;
+}
+.product-card:hover .action-bar{
+    right: 15px;
+}
+.product-card .product-details h6{
+    color: var(--color-C22026);
+    font-size: 16px;
+    font-weight: 600;
+}
+.product-card .product-details h5{
+    color: var(--color-1c1c1b);
+    font-size: 15px;
+    font-weight: 500;
+}
+.product-card .product-details p.product-category{
+    color: var(--color-1c1c1b)!important;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.wishlist-icon{
+    top: 5%;
+    right: 15px;
+}
+
+.product-cart .product-price {
+    color: var(--color-C22026);
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+
+
+.product-cart span i {
+    font-size: 1.2rem;
+    padding: 5px;
+    background: var(--color-C22026);
+    color: var(--secondary-color);
+}
+
+.iitemActioncard{
+    height: 32px;
+    width: 32px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 3px 8px rgba(0,0,0,0.12);
+}
+
+.iitemActioncard:hover{
+    background: rgb(243, 173, 173);
+}
+
+.product-card .product-details h6 {
+    color: #000000;
+    font-weight: 700;
+    height: 24px;
+    overflow: hidden;
+    height: 37px;
+    font-size: 0.8125rem !important;
+}
+.action-bar {
+    top: 4%;
+    right: -39px;
+    transition: 0.3s;
+}
+
+.action-cardlist-btn {
+    position: absolute;
+    bottom: -64px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: var(--color-C22026);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1px 23px;
+    color: white;
+    transition: 0.3s;
+
+}
+
+
+.product-card:hover .action-bar{
+    right: 20px;
+}
+
+.product-card:hover .action-cardlist-btn{
+    bottom: 63px;
+  
+}
+
+.product-price-del{
+    color: #1e1e1e91;
+    /* font-size: 15px; */
+    font-size: 13px;
+    font-weight: 600;
+    opacity: .6;
+}
+
+.badge-custom {
+    padding: 3px;
+    font-size: 11px;
+    border-radius: 0 50em 50em 0;
+    color: var(--color-C22026);
+    font-weight: 600;
+    line-height: 26px;
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+    left: 0px;
+    width: 61px;
+    top: 20px;
+    box-shadow: 2px 1px 6px 2px rgba(0, 0, 0, 0.1), 0 4px 4px 0px rgba(0, 0, 0, 0.06) !important;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.badge-custom .box {
+    height: 30px;
+    width: 30px;
+    background: var(--color-C22026);
+    color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-title{
+    color: #000000;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    overflow: hidden;
+    height: 36px;
+    font-size: 0.8125rem !important;
+    line-height: 1.4 !important;
+    opacity: .7;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .action-bar{
+        top: 5%;
+        right: 5px;
+        transition: 0.3s;
+    }
+    .product-card:hover .action-bar{
+        right: 20px;
+    }
+
+    .product__info h3 a{
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .action-bar{
+        top: 5%;
+        right: -40px;
+        transition: 0.3s;
+    }
+   .product-card:hover .action-bar{
+        right: 20px;
+   }
+    .product__info h3 a{
+        font-size: 1rem;
+    }
+
+    .product__card-bottom span i{
+        font-size: 1rem;
+    }
+
+    .action-cardlist-btn {
+        display: none;
+    }
+}
+
+.action-cardlist-btn {
+    display: none;
+}

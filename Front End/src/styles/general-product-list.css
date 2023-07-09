@@ -1,0 +1,45 @@
+.general__card{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.general__box{
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+}
+
+@media only screen and (max-width: 768px) {
+    .general__card{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    } 
+}
+@media only screen and (max-width: 576px) {
+    .general__card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
+
+
+
+
+
+
+
+/* .general_product_list{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.cardwidth{
+    flex-basis: 16.6%;
+}   
+
+@media only screen and (max-width: 600px) {
+    .cardwidth {
+        flex-basis: 45%;
+    }
+    
+  } */

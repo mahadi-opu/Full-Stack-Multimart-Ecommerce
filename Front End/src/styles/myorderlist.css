@@ -1,0 +1,33 @@
+.dropdownitemtxt .dropdown-item {
+  font-size: 13px !important;
+}
+
+.dropdownitemtxt {
+  background: #5ccdc8;
+}
+
+.cancelmodalhead {
+  border-bottom: 0px solid black;
+}
+
+.footerbntsst {
+  display: flex;
+  justify-content: center;
+  border-top: 0px;
+  padding: 9px 4px;
+}
+.btnfontsize {
+  font-size: 11px;
+}
+.cancelmodalhead {
+  border-bottom: 0px solid black;
+  padding-bottom: 0px;
+}
+.backgroudcolor{
+  background: #3d6f7e !important;
+  color: #fffcfc;
+}
+
+.mrtopset{
+  margin-top: 10%;
+}

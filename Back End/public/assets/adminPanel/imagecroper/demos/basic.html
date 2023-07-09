@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Crop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        
+        <script src="../libs/jquery.js" ></script>
+        <script src="../dist/rcrop.min.js" ></script>
+        <link href="../dist/rcrop.min.css" media="screen" rel="stylesheet" type="text/css">
+
+        <style>
+            body{margin: 0; padding: 0px}
+            main{
+                min-height:500px;
+                display: block
+            }
+            pre{
+                overflow: auto;
+            }
+            .demo{
+                padding: 20px;
+            }
+            .image-wrapper{
+                max-width: 600px;
+                min-width: 200px;
+            }
+            img{
+                max-width: 100%;
+            }
+            
+        </style>
+        
+        <script>
+            $(document).ready(function(){
+                $('#image-1').rcrop({
+                    grid : true
+                });
+                $('#image-2').rcrop({
+                    full : true
+                });
+                $('#image-3').rcrop({
+                    minSize : [160,90],
+                    maxSize : [800,800]
+                });
+                $('#image-4').rcrop({
+                    minSize : [160,90],
+                    preserveAspectRatio : true,
+                    grid : true
+                });
+            });
+        </script>
+        
+    </head>
+    <body>
+        <main>
+            <div class="demo">
+                <h2>Grid</h2>
+                <p>asdsda</p>
+<pre>
+<code>
+$('#image-1').rcrop({
+    grid : true
+});
+</code>
+</pre>
+                <div class="image-wrapper">
+                    <img id="image-1" src="images/demo.jpg">
+                </div>
+            </div>
+            
+            <div class="demo">
+                <h2>Image full selected</h2>
+                <p>asdsda</p>
+<pre>
+<code>
+$('#image-2').rcrop({
+    full : true
+});
+</code>
+</pre>
+                <div class="image-wrapper">
+                    <img id="image-2" src="images/demo.jpg">
+                </div>
+            </div>
+            
+            <div class="demo">
+                <h2>Crop area size</h2>
+                <p>asdsda</p>
+<pre>
+<code>
+$('#image-3').rcrop({
+    minSize : [160,90],
+    maxSize : [800,800]
+});
+</code>
+</pre>
+                <div class="image-wrapper">
+                    <img id="image-3" src="images/demo.jpg">
+                </div>
+            </div> 
+            
+            <div class="demo">
+                <h2>Preserve Aspect Ratio</h2>
+                <p>You can force to preserve an aspect ratio. Use minSize not only to define crop area's minimum width and height, but crop aspect ratio too.</p>
+<pre>
+<code>
+$('#image-4').rcrop({
+    minSize : [160,90],
+    preserveAspectRatio : true,
+    grid : true
+});
+</code>
+</pre>
+                <div class="image-wrapper">
+                    <img id="image-4" src="images/demo.jpg">
+                </div>
+            </div> 
+            
+        </main>
+    </body>
+</html>

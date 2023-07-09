@@ -1,0 +1,6 @@
+.about_img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}

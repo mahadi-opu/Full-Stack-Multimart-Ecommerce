@@ -1,0 +1,120 @@
+/* .order_info_div{
+    padding-bottom: 30px;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    display: flex;
+    gap:3px;
+}
+.infoCart{
+    position: relative;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin-top: 30px;
+    padding: 0 15px;
+}
+.single-feature .feature-icon {
+    margin-right: 13px;
+} */
+
+
+.features-wrap {
+    margin-top: -5px;
+    background: white;
+    border: 1px solid #e1e1e1;
+}
+
+.features-wrap .features {
+    padding-bottom: 30px;
+    border-radius: 2px;
+}
+
+.features-wrap .feature-list {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features-wrap .single-feature {
+    position: relative;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin-top: 30px;
+    padding: 0 15px;
+    border-right: 1px solid #b5b0b0 ;
+}
+
+.single-feature .feature-icon {
+    margin-right: 13px;
+}
+.features-wrap .feature-list {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+.features-wrap .single-feature {
+    position: relative;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin-top: 30px;
+    padding: 0 15px;
+}
+
+.single-feature {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+
+
+.iconColor{
+    font-size: 36px;
+    color: #9da0a3 !important;
+    color: var(--color-primary);
+}
+
+.feature-details h6{
+    font-weight: 700;
+    color: black;
+    font-size: 13px;
+}
+
+.feature-details span{
+    font-weight: 700;
+    color: rgb(153, 153, 153);
+    font-size: 11px;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .features-wrap .single-feature {
+        position: relative;
+        flex:100%;
+        max-width: 100%;
+        margin:10px;
+        padding: 15px;
+    }
+
+    .features-wrap {
+        background: white;
+        border: 1px solid #1e1313;
+    }
+
+    .payicontop{
+        margin-bottom: 10px;
+    }
+    .margincart{
+        padding: 1px;
+        margin-top: 20px;
+    }
+    .finalPayment {
+        width: 100%;
+    }
+    
+  }
+
+

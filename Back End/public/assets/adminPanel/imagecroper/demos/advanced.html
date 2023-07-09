@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Crop. Advanced demos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        
+        <script src="../libs/jquery.js" ></script>
+        <script src="../dist/rcrop.min.js" ></script>
+        <link href="../dist/rcrop.min.css" media="screen" rel="stylesheet" type="text/css">
+
+        <style>
+            body{margin: 0; padding: 0px}
+            main{
+                min-height:500px;
+                display: block
+            }
+            pre{
+                overflow: auto;
+            }
+            .demo{
+                padding: 20px;
+            }
+            .image-wrapper{
+                max-width: 600px;
+                min-width: 200px;
+            }
+            img{
+                max-width: 100%;
+            }
+            
+            #image-4-wrapper .rcrop-outer-wrapper{
+                opacity: .75;
+            }
+            #image-4-wrapper .rcrop-outer{
+                background: #000
+            }
+            #image-4-wrapper .rcrop-croparea-inner{
+                border: 1px dashed #fff;
+            }
+            
+            #image-4-wrapper .rcrop-handler-corner{
+                width:12px;
+                height: 12px;
+                background: none;
+                border : 0 solid #51aeff;
+            }
+            #image-4-wrapper .rcrop-handler-top-left{
+                border-top-width: 4px;
+                border-left-width: 4px;
+                top:-2px;
+                left:-2px
+            }
+            #image-4-wrapper .rcrop-handler-top-right{
+                border-top-width: 4px;
+                border-right-width: 4px;
+                top:-2px;
+                right:-2px
+            }
+            #image-4-wrapper .rcrop-handler-bottom-right{
+                border-bottom-width: 4px;
+                border-right-width: 4px;
+                bottom:-2px;
+                right:-2px
+            }
+            #image-4-wrapper .rcrop-handler-bottom-left{
+                border-bottom-width: 4px;
+                border-left-width: 4px;
+                bottom:-2px;
+                left:-2px
+            }
+            #image-4-wrapper .rcrop-handler-border{
+                display: none;
+            }
+            
+            #image-4-wrapper .clayfy-touch-device.clayfy-handler{
+                background: none;
+                border : 0 solid #51aeff;
+                border-bottom-width: 6px;
+                border-right-width: 6px;
+            }
+            
+            label{
+                display: inline-block;
+                width: 60px;
+                margin-top: 10px;
+            }
+            #update{
+                margin: 10px 0 0 60px ;
+                padding: 10px 20px;
+            }
+            
+            #cropped-original, #cropped-resized{
+                padding: 20px;
+                border: 4px solid #ddd;
+                min-height: 60px;
+                margin-top: 20px;
+            }
+            #cropped-original img, #cropped-resized img{
+                margin: 5px;
+            }
+
+            
+        </style>
+        
+        <script>
+            $(document).ready(function(){
+                $('#image-1').rcrop({
+                    minSize : [200,200],
+                    preserveAspectRatio : true,
+                    grid : true,
+                    
+                    preview : {
+                        display: true,
+                        size : [100,100],
+                    }
+                });
+                
+                var $image2 = $('#image-2'),
+                    $update = $('#update'),
+                    inputs = {
+                        x : $('#x'),
+                        y : $('#y'),
+                        width : $('#width'),
+                        height : $('#height')
+                    },
+                    fill = function(){
+                        var values = $image2.rcrop('getValues');
+                        for(var coord in inputs){
+                           inputs[coord].val(values[coord]);
+                        }
+                    }
+                $image2.rcrop();
+    
+                $image2.on('rcrop-changed rcrop-ready', fill);
+                
+                $update.click(function(){
+                    $image2.rcrop('resize', inputs.width.val(), inputs.height.val(), inputs.x.val(), inputs.y.val());
+                    fill();
+                })
+                
+                $('#image-3').rcrop({
+                    minSize : [200,200],
+                    preserveAspectRatio : true,
+                    
+                    preview : {
+                        display: true,
+                        size : [100,100],
+                        wrapper : '#custom-preview-wrapper'
+                    }
+                });
+                
+                $('#image-3').on('rcrop-changed', function(){
+                    var srcOriginal = $(this).rcrop('getDataURL');
+                    var srcResized = $(this).rcrop('getDataURL', 50,50);
+                    
+                    $('#cropped-original').append('<img src="'+srcOriginal+'">');
+                    $('#cropped-resized').append('<img src="'+srcResized+'">');
+                });
+                
+                $('#image-4').rcrop();
+                
+                
+            });
+        </script>
+        
+    </head>
+    <body>
+        <main>
+            <div class="demo">
+                <h2>Preview</h2>
+                <p>You can add a preview of the selected area.</p>
+<pre>
+<code>
+$('#image-1').rcrop({
+    minSize : [200,200],
+    preserveAspectRatio : true,
+
+    preview : {
+        display: true,
+        size : [100,100],
+    }
+});
+</code>
+</pre>
+                <div class="image-wrapper">
+                    <img id="image-1" src="images/demo.jpg">
+                </div>
+            </div>
+            
+            
+            <div class="demo">
+                <h2>Events and methods</h2>
+                <p>
+                    Here you can see an example of using 'rcrop-changed' and 'rcrop-ready' events. Also, 'getValues' and 'resize' methods are used.
+                    <br>
+                    Fill 'x' or 'y' fields with 'center' to center crop area, or use numbers.
+                </p>
+<pre>
+<code>
+var $image2 = $('#image-2'),
+    $update = $('#update'),
+    inputs = {
+        x : $('#x'),
+        y : $('#y'),
+        width : $('#width'),
+        height : $('#height')
+    },
+    fill = function(){
+        var values = $image2.rcrop('getValues');
+        for(var coord in inputs){
+            inputs[coord].val(values[coord]);
+        }
+    };
+
+// Initilize
+$image2.rcrop();
+
+// Fill inputs when Responsive Cropper is ready and when crop area is being resized or dragged 
+$image2.on('rcrop-changed rcrop-ready', fill);
+
+// Call resize method when button is clicked. And then fill inputs to fix invalid values.
+$update.click(function(){
+    $image2.rcrop('resize', inputs.width.val(), inputs.height.val(), inputs.x.val(), inputs.y.val());
+    fill();
+});
+</code>
+</pre>
+                <div class="image-wrapper">
+                    <img id="image-2" src="images/demo.jpg">
+                    <form>
+                        <div>
+                            <label for="width">width:</label> 
+                            <input id="width" type="text">
+                        </div>
+                        <div>
+                            <label for="height">height:</label>  
+                            <input id="height" type="text">
+                        </div>
+                        <div>
+                            <label for="x">x:</label>  
+                            <input id="x" type="text">
+                        </div>
+                        <div>
+                            <label for="y">y:</label>  
+                            <input id="y" type="text">
+                        </div>
+                        <input id="update" type="button" value="Aplicar">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="demo">
+                <h2>Events and methods (2)</h2>
+                <p>You can add a listener to 'rcrop-changed' event. Also, you can get DataURL of the selected area</p>
+<pre>
+<code>
+$('#image-3').rcrop({
+    minSize : [200,200],
+    preserveAspectRatio : true,
+
+    preview : {
+        display: true,
+        size : [100,100],
+        wrapper : '#custom-preview-wrapper'
+    }
+});
+
+$('#image-3').on('rcrop-changed', function(){
+    var srcOriginal = $(this).rcrop('getDataURL');
+    var srcResized = $(this).rcrop('getDataURL', 50,50);
+
+    $('#cropped-original').append('&lt;img src=&quot;'+srcOriginal+'&quot;&gt;');
+    $('#cropped-resized').append('&lt;img src=&quot;'+srcResized+'&quot;&gt;');
+})
+</code>
+</pre>
+                <div class="image-wrapper">
+                    <img id="image-3" src="https://raw.githubusercontent.com/aewebsolutions/rcrop/master/demos/images/demo.jpg">
+                    <div id="custom-preview-wrapper"></div>
+                    <div id="cropped-resized">
+                        <h3>Images resized (50x50)</h3>
+                    </div>
+                    <div id="cropped-original">
+                        <h3>Images not resized (original size)</h3>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            
+            <div class="demo">
+                <h2>Styling</h2>
+                <p>Style Responsive Cropper overriding CSS or editing SCSS file.</p>
+<pre>
+<code>
+#image-4-wrapper .rcrop-outer-wrapper{
+    opacity: .75;
+}
+#image-4-wrapper .rcrop-outer{
+    background: #000
+}
+#image-4-wrapper .rcrop-croparea-inner{
+    border: 1px dashed #fff;
+}
+
+#image-4-wrapper .rcrop-handler-corner{
+    width:12px;
+    height: 12px;
+    background: none;
+    border : 0 solid #51aeff;
+}
+#image-4-wrapper .rcrop-handler-top-left{
+    border-top-width: 4px;
+    border-left-width: 4px;
+    top:-2px;
+    left:-2px
+}
+#image-4-wrapper .rcrop-handler-top-right{
+    border-top-width: 4px;
+    border-right-width: 4px;
+    top:-2px;
+    right:-2px
+}
+#image-4-wrapper .rcrop-handler-bottom-right{
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+    bottom:-2px;
+    right:-2px
+}
+#image-4-wrapper .rcrop-handler-bottom-left{
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    bottom:-2px;
+    left:-2px
+}
+#image-4-wrapper .rcrop-handler-border{
+    display: none;
+}
+
+// For touch devices we must use clayfy handler
+#image-4-wrapper .clayfy-touch-device.clayfy-handler{
+    background: none;
+    border : 0 solid #51aeff;
+    border-bottom-width: 6px;
+    border-right-width: 6px;
+}
+</code>
+</pre>
+                <div class="image-wrapper" id="image-4-wrapper">
+                    <img id="image-4" src="images/demo.jpg">
+
+                </div>
+            </div>
+            
+        </main>
+    </body>
+</html>

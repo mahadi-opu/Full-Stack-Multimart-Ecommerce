@@ -1,0 +1,11 @@
+
+.product_section{
+    flex-basis: 16.6%;
+  }
+  
+@media only screen and (max-width: 600px) {
+    .product_section{
+      flex-basis: 50%;
+    }
+    
+  }

@@ -1,0 +1,314 @@
+@import "compass/css3";
+
+$prefix : ".rcrop-";
+$handlerSize : 20px;
+$handlerAfterSize : 10px;
+$break-small : 600px;
+
+#{$prefix}wrapper{
+    position: relative;
+    display : inline-block;
+    max-width: inherit;
+    
+    img{display:block;}
+    
+    #{$prefix}croparea{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        
+        
+        #{$prefix}croparea-inner{
+            position: absolute;
+            top:0;left:0; width: 100%; height: 100%;
+            border : 1px solid rgba(255,255,255,1);
+            @include box-sizing(border-box);
+        }
+        
+       /*
+        #{$prefix}handler{
+            position: absolute;
+            width: $handlerSize;
+            height: $handlerSize;
+            z-index:1001;
+           
+            &:after{
+               content: "";
+               background: rgba(0,0,0,.5);
+               border : 1px solid rgba(255,255,255,.5);
+               position:absolute;
+               width: $handlerAfterSize;
+               height : $handlerAfterSize;
+               top: 50%;
+               margin-top: -$handlerAfterSize/2;
+               left: 50%;
+               margin-left: -$handlerAfterSize/2;
+               @include box-sizing(border-box);
+            }
+            
+            &#{$prefix}handler-top{
+                top: -$handlerSize/2;
+                left: 50%;
+                margin-left: -$handlerSize/2;
+                cursor : n-resize;
+            }
+            &#{$prefix}handler-top-left{
+                top: -$handlerSize/2;
+                left: -$handlerSize/2;
+                cursor : nw-resize;
+            }
+            &#{$prefix}handler-top-right{
+                top: -$handlerSize/2;
+                right: -$handlerSize/2;
+                cursor : ne-resize;
+            }
+            &#{$prefix}handler-left{
+                margin-top: -$handlerSize/2;
+                top:50%;
+                left: -$handlerSize/2;
+                cursor : w-resize;
+            }
+            &#{$prefix}handler-right{
+                margin-top: -$handlerSize/2;
+                top:50%;
+                right: -$handlerSize/2;
+                cursor : e-resize;
+            }
+            &#{$prefix}handler-bottom{
+                bottom: -$handlerSize/2;
+                left: 50%;
+                margin-left: -$handlerSize/2;
+                cursor : s-resize;
+            }
+            &#{$prefix}handler-bottom-left{
+                bottom: -$handlerSize/2;
+                left: -$handlerSize/2;
+                cursor : sw-resize;
+            }
+            &#{$prefix}handler-bottom-right{
+                bottom: -$handlerSize/2;
+                right: -$handlerSize/2;
+                cursor : se-resize;
+                &:after{
+                    @media screen and (max-width: $break-small) {
+                        height : $handlerAfterSize * 2;
+                        width : $handlerAfterSize * 2;
+                        margin-left: -$handlerAfterSize;
+                        margin-top : -$handlerAfterSize;
+                    }
+                }
+            }
+        }
+        */
+        
+    }
+    #{$prefix}outer-wrapper{
+        @include opacity(.5);
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #{$prefix}outer{
+        background: #fff;
+        position: absolute;
+        
+        
+        &#{$prefix}outer-left{
+            height: 100%;
+            left:0;
+            top: 0;
+        }
+        &#{$prefix}outer-right{
+            height: 100%;
+            right:0;
+            top: 0;
+        }
+        &#{$prefix}outer-top{
+            top: 0;
+            width: 100%;
+        }
+        &#{$prefix}outer-bottom{
+            bottom: 0;
+            width: 100%;
+        }
+    }
+    
+    #{$prefix}grid{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #{$prefix}grid-line{
+        position: absolute;
+        
+        $border-grid : 1px dashed #fff;
+        
+        &:nth-child(1){
+            width: 100%;
+            height: 33%;
+            top: 33%;
+            left: 0;
+            border-top: $border-grid;
+            border-bottom: $border-grid;
+        }
+        &:nth-child(2){
+            height: 100%;
+            width: 33%;
+            left: 33%;
+            top: 0;
+            border-left: $border-grid;
+            border-right: $border-grid;
+        }
+    }
+    
+    #{$prefix}handler-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        $handler-width : 8px;
+        $handler-margin : -3px;
+        
+        #{$prefix}handler-corner{
+            position: absolute;
+            width: $handler-width - 2;
+            height: $handler-width - 2;
+            background: #fff;
+            border : 1px solid #000;
+        }
+        #{$prefix}handler-top-left{
+            top:$handler-margin;
+            left:$handler-margin;
+        }
+        #{$prefix}handler-top-right{
+            top:$handler-margin;
+            right:$handler-margin;
+        }
+        #{$prefix}handler-bottom-left{
+            bottom:$handler-margin;
+            left:$handler-margin;
+        }
+        #{$prefix}handler-bottom-right{
+            bottom:$handler-margin;
+            right:$handler-margin;
+        }
+        
+        #{$prefix}handler-border{
+            position: absolute;
+            width: $handler-width - 2;
+            height: $handler-width - 2;
+            background: #fff;
+            border : 1px solid #000;
+        }
+        #{$prefix}handler-top{
+            top:$handler-margin;
+            left: 50%;
+            margin-left:$handler-margin;
+            
+        }
+        #{$prefix}handler-right{
+            right:$handler-margin;
+            top: 50%;
+            margin-top:$handler-margin;
+        }
+        #{$prefix}handler-bottom{
+            bottom:$handler-margin;
+            left: 50%;
+            margin-left:$handler-margin;
+        }
+        #{$prefix}handler-left{
+            left : $handler-margin;
+            top: 50%;
+            margin-top: $handler-margin;
+        }
+                    
+        
+    }
+    
+    .clayfy-touch-device{
+        #{$prefix}handler-bottom-right{
+            display: none;
+            width: 18px;
+            height: 18px;
+            bottom: -5px;
+            right: -5px;
+        }
+    }
+    
+}
+
+
+
+$prefix : 'clayfy';
+
+.#{$prefix}-box{
+    &:not(.clayfy-not-move){
+        cursor : move;
+    }
+}
+.#{$prefix}-ghost{
+    z-index: 1000;
+}
+.#{$prefix}-ghost-opacity{
+    opacity : .5;
+}
+
+.#{$prefix}-handler{
+    //background : #000;
+    z-index: 1001;
+    
+    &.#{$prefix}-top{
+        cursor: n-resize;
+        &.left{
+            cursor: nw-resize;
+            /*
+            &:before{
+                content: '';
+                position: absolute;
+                top:0; left:0;
+                height: 100%; width: 100%;
+                border-top: 1px solid #000;
+                border-left: 1px solid #000;
+            }
+            */
+        }
+        &.right{
+            cursor: ne-resize;
+        }
+    }
+    &.#{$prefix}-bottom{
+        cursor: n-resize;
+        &.left{
+            cursor: sw-resize;
+        }
+        &.right{
+            cursor: se-resize;
+        }
+    }
+    &.#{$prefix}-left{
+        cursor: w-resize;
+    }
+    &.#{$prefix}-right{
+        cursor: w-resize;
+    }
+    
+    &.#{$prefix}-touch-device{
+        background: #fff;
+        border : 1px solid #000;
+        border-radius: 3px;
+    }
+    
+
+}
+
+.#{$prefix}-sort-droparea{
+    border : 2px solid #ccc
+}

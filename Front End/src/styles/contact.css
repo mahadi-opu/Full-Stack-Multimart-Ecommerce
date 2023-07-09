@@ -1,0 +1,101 @@
+.coutactinputdiv{
+    font-size: 14px;
+    padding: 30px 40px;
+}
+.addressinfo li{
+    padding:6px 20px;
+    font-size: 14px;
+}
+
+ 
+.icondata{
+    border:1px solid black;
+    height: 10px ;
+    width: 10px ;
+ 
+}
+.icondata {
+    border: 1px solid #d1c7c7;
+    height: 29px;
+    text-align: center;
+    width: 28px;
+    border-radius: 20px;
+    background: #ffffff;
+}
+
+
+.infoflex {
+    display: flex;
+    margin: 39px 20px;
+}
+
+span.title_tx {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #a7a7a7;
+}
+
+.titlewidth {
+    flex-basis: 20%;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.titleinfowidth {
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+.inputtxtsiz{
+    font-size: 14px;
+}
+
+
+.coutactinputdiv {
+    font-size: 14px;
+    padding: 30px 75px;
+    border-radius: 26%;
+}
+
+/* .locationBackground{
+    background: white;
+} */
+.rightbackground{
+    background: #35879547 !important;
+    background: #f5ece5 !important;
+}
+
+.locationBackground {
+    background: #f5ece5;
+}
+.maindiv{
+    border: 1px solid #dfd7d7;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.locationBackground {
+    background: #f5ece5;
+    border-right: 8px solid #f6f9fc;
+}
+
+.sendbtn{
+    background: #297e83 !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .coutactinputdiv {
+
+        padding: 26px 20px;
+
+    }
+    .infoflex {
+        display: flex;
+        margin: 36px 24px;
+        gap: 35px;
+    }
+    
+  }
+

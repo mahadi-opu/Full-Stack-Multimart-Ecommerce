@@ -1,0 +1,1158 @@
+{
+	"info": {
+		"_postman_id": "9a7cc1af-e29a-46c4-b0fd-68196aa7d52a",
+		"name": "Rainforce Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11394774",
+		"_collection_link": "https://winter-eclipse-602933.postman.co/workspace/New-Team-Workspace~2d1d3eec-9daf-4c7e-b4fd-45357508554c/collection/19233945-9a7cc1af-e29a-46c4-b0fd-68196aa7d52a?action=share&creator=11394774&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "home",
+			"item": [
+				{
+					"name": "Popular Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/home/popular/product/get",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"home",
+								"popular",
+								"product",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trending Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/home/trending/product/get?",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"home",
+								"trending",
+								"product",
+								"get"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/home/category/product?category_id=1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"home",
+								"category",
+								"product"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SubCategory Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/home/subcategory/product?subCategory_id=1 ",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"home",
+								"subcategory",
+								"product"
+							],
+							"query": [
+								{
+									"key": "subCategory_id",
+									"value": "1 "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Arrival Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/home/new/arrival/product",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"home",
+								"new",
+								"arrival",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Best Sell Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/home/best/sell/product",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"home",
+								"best",
+								"sell",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/product/details/?id=2",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"product",
+								"details",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category Wise Subcategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/category/wise/subcategory?category_id=1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"category",
+								"wise",
+								"subcategory"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Section Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/section/product?type=trending&subcategory_id=All",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"section",
+								"product"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "trending",
+									"description": "type canbe popular,trending,\nnewArrival,\nbestSell,"
+								},
+								{
+									"key": "subcategory_id",
+									"value": "All"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product size List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/product/size/list",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"product",
+								"size",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "offer",
+			"item": [
+				{
+					"name": "Offer Product LIst",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/offer/product/list?offer_id=1&subcategory_id=2",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"offer",
+								"product",
+								"list"
+							],
+							"query": [
+								{
+									"key": "offer_id",
+									"value": "1"
+								},
+								{
+									"key": "subcategory_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Offer Banner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/offer/banner",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"offer",
+								"banner"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/signup?name=kazi&email=kazi161@gmail.com&password=123456&password_confirmation=123456",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"signup"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "kazi"
+								},
+								{
+									"key": "email",
+									"value": "kazi161@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "acc",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/login?email=kazi11@gmail.com&password=123456",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "kazi11@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log Out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/logout",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/product/category",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"product",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/user",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Shipping billing",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/user/shipping/billing/address",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"shipping",
+								"billing",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order LIst",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/user/order/list?",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"order",
+								"list"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment method",
+			"item": [
+				{
+					"name": "stripe payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/stripe/payment",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"stripe",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Product Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://admin.demo.reinforcelabhosting.com/api/product/details/?id=4",
+							"protocol": "https",
+							"host": [
+								"admin",
+								"demo",
+								"reinforcelabhosting",
+								"com"
+							],
+							"path": [
+								"api",
+								"product",
+								"details",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subcategory List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/all/subcategory",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"all",
+						"subcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/search/product?name= laptop",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"search",
+						"product"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": " laptop"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Country List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/country/list",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"country",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shipping cost",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/shipping/cost/get?division_id=4&district_id=36",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"shipping",
+						"cost",
+						"get"
+					],
+					"query": [
+						{
+							"key": "division_id",
+							"value": "4"
+						},
+						{
+							"key": "district_id",
+							"value": "36"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/currency/get",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"currency",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Division List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/division/list",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"division",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wish List Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/user/wish/list/add?user_id=2&product_id=3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"wish",
+						"list",
+						"add"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "product_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Wishlist Get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/user/wish/get",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"wish",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category Subcategory list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/all/category/subcategory?xcx=d&ffff=d",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"all",
+						"category",
+						"subcategory"
+					],
+					"query": [
+						{
+							"key": "xcx",
+							"value": "d"
+						},
+						{
+							"key": "ffff",
+							"value": "d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Price Range src",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/product/price/range/src?min=0&max=100000&color=%23ff1a1a&size",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"product",
+						"price",
+						"range",
+						"src"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "0"
+						},
+						{
+							"key": "max",
+							"value": "100000"
+						},
+						{
+							"key": "color",
+							"value": "%23ff1a1a"
+						},
+						{
+							"key": "size",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/product/company/info",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"product",
+						"company",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wishcount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/user/wish/count",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"wish",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product min max price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/product/price/min/max",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"product",
+						"price",
+						"min",
+						"max"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Color",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/product/all/color",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"product",
+						"all",
+						"color"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Size",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/product/all/size",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"product",
+						"all",
+						"size"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Brand",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Popular Category",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/product/popular/category",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"product",
+						"popular",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LInk Banner",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "185|PynYOnQI6gJmkEaLIcOHHUkEcV7jtEmDRb37fWKc",
+			"type": "string"
+		}
+	]
+}

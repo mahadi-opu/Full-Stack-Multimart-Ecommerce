@@ -1,0 +1,12 @@
+.top10_images img{
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+}
+.top10_arraw a{
+    font-size: 30px;
+}
+.top10_category a{
+    font-size: 16px;
+    text-align: left;
+}

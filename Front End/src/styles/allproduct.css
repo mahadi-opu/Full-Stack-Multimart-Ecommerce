@@ -1,0 +1,139 @@
+.category_name{
+    background: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 3px 3px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    color: #363535;
+}
+.category_name:hover{
+    background: #ffa80669;
+    color:rgb(53, 52, 52) 
+}
+
+.sub_category_name{
+    background: none;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-left: 16px;
+    color: #8b8b8b;
+    border-left: 1px solid;
+    padding-left: 8px;
+    cursor: pointer;
+}
+.sub_category_name:hover{
+    color:red;
+}
+.testbd{
+    padding:0px 3px;
+}
+
+.sideitemtxt{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px 0px;
+    color: #1e1e1e70;
+    margin-top: 5px;
+    border-bottom: 1px solid #e9d9d9d6;
+}
+
+.colorcodeset{
+    height: 10px;
+    width: 10px;
+}
+.colorsizheight{
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f179;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .css-187mznn-MuiSlider-root {
+
+    color:var(--color-C22026) !important;
+    font-size: 10px;
+
+}
+.pricerangeset{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    /* gap: 25px; */
+    color: #999494;
+
+}
+.srcdiv{
+    margin-bottom: 4px;
+    background: rgb(255, 255, 255);
+    border: 1px solid #00000017;
+}
+
+.srcdiv:first-child {
+    margin-top: 25px;
+  }
+.srcdiv:last-child {
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+  }
+.reseticon{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reseticon:hover{
+    color:blue;
+}
+/* All Product List css */
+.product_sort_Card {
+    padding: 10px 0px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+    background: #ffffff !important;
+    margin-top: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.all_product_Card {
+    padding: 10px 0px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+    background: #ffffff !important;
+}
+.shop__title {
+    border-bottom: 2px solid #c2202669;
+    padding-bottom: 6px!important;
+    /* padding-top: 1rem; */
+}
+.shop__title h3{
+    font-size: 16px;
+}
+
+.product_pagination_Card {
+    padding: 10px 0px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+    background: #ffffff !important;
+}

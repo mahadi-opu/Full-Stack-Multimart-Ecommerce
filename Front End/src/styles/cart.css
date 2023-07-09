@@ -1,0 +1,67 @@
+
+.table tr td img {
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: cover;
+}
+
+td i{
+    cursor: pointer;
+}
+td{
+    color: var(  --primary-color);
+}
+.carthead__st{
+    border-bottom: 2px solid #dddcdc;
+    font-size: 14px;
+    color: #666060;
+    background-color: #fafafa;
+}
+
+.itemabtr {
+    display: flex;
+    /* position: relative; */
+    text-align: center;
+  }
+  .bsewd{
+    width: 30px;
+    flex-basis: 19%;
+  }
+
+  .qtyinput {
+    width: 50px;
+    border: 1px solid #00000021;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .bsewd{
+        flex-basis: 46%;
+      }
+
+      .qtyinput {
+        width: 40px;
+        border: 1px solid #00000021;
+        text-align: center;
+    }
+    .qt_btn {
+        width: 10px;
+    }
+    .checouttable{
+        font-size: 11px;
+    }
+    .carthead__st {
+        border-bottom: 2px solid #dddcdc;
+        font-size: 10px;
+        color: #666060;
+        background-color: #fafafa;
+    }
+
+    .carthead__st th{
+      text-align: center;
+    }
+    
+    
+  }
+  
+

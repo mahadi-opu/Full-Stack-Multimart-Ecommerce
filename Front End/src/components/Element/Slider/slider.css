@@ -1,0 +1,157 @@
+  .hero__slider{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .hero__slider img{
+      max-height: 400px;
+      width: 100%;
+      object-fit: cover;
+  }
+  
+  .hero_slider_content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 75px;
+  }
+
+  .hero_slider_content h1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -19px;
+    line-height: 36px;
+    width: 250px;
+    border-radius: 0px 26px 26px 0px;
+    box-shadow: 2px 1px 6px 2px rgba(0, 0, 0, 0.1), 0 4px 4px 0px rgba(0, 0, 0, 0.06) !important;
+    background: #f6f9fc;
+    color: #000000fa;
+  }
+
+  .offerbtn {
+    position: absolute;
+    left: 29%;
+    top: 56%;
+}
+  .hero_slider_content p {
+    margin: 20px 0;
+  }
+  .hero__slider ul {
+    position: absolute;
+    bottom: 10px;
+  }
+  .hero__slider ul li {
+    border: 2px solid #b8b7b7;
+    /* border: 2px solid #ff0000; */
+    /* border-radius: 50%; */
+    padding: 10px;
+  }
+  .hero__slider ul li button {
+    background: transparent !important;
+    color: transparent !important;
+  }
+  .hero__slider ul li button::before {
+    font-size: 15px !important;
+    color: var(--color-C22026) !important;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    margin: auto;
+  }
+  
+  .buy__btn{
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    /* border-radius: 5px; */
+    background-color: var( --color-C22026);
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 40px;
+    border-radius: 7px;
+}
+
+.buy__btn a:hover{
+    color: var(--secondary-color);
+}
+.react-multiple-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50em;
+  border: 0;
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+  font-size: 15px;
+  line-height: 40px;
+  /* padding: 0; */
+  text-align: center;
+}
+
+.react-multiple-carousel__arrow::before {
+  font-size: 20px;
+  color: #999;
+  display: block;
+  font-family: revicons;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* .offerbtn{
+  position: absolute;
+  left: 48%;
+  top:30%;
+} */
+
+
+@media (max-width: 991.98px) {
+  
+  .hero__slider img{
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+  } 
+
+  .hero_slider_content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+  }
+  
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .hero__slider img{
+      max-height: 350px;
+      width: 100%;
+      object-fit: cover;
+    } 
+    .hero_slider_content h1 {
+      display: none;
+   }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .hero__slider img{
+      max-height: 350px;
+      width: 100%;
+      object-fit: cover;
+  }
+  .hero_slider_content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+  }
+}

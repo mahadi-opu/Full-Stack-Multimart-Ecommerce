@@ -1,0 +1,36 @@
+
+
+/* .common__section {
+    background: linear-gradient(rgba(0, 0, 0, 0.562),rgba(0, 0, 0, 0.562)),url('../assets/images/common-section.webp') no-repeat center center;
+    background-size: cover;
+    height: 196px;;
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.common__section {
+    background: #f6f9fc;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.562),rgba(0, 0, 0, 0.562)),url(http://localhost:3000/static/media/common-section.dd6615b….webp) no-repeat center center; */
+    background-size: cover;
+    height: 131px;
+    padding: 13px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.common__section h1{    
+    color: var( --secondary-color);
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px){
+    .common__section {
+        padding: 70px 0px;
+    }
+    .common__section h1{
+        font-size: 1.4rem;
+    }
+}
